@@ -18,21 +18,21 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: primaryColor,
       drawer: MainDrawer(),
       body: Center(
-          child: CustomScrollView(
-            slivers: [
-              MainAppBar(),
-              SliverToBoxAdapter(
+        child: CustomScrollView(
+          slivers: [
+            MainAppBar(),
+            SliverToBoxAdapter(
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    CategoryCard(),
-                    const SizedBox(height: 16.0),
-                    HourlyCard(),
-            ],
-          ))]
-      ,
-    ),)
-    ,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                CategoryCard(),
+                const SizedBox(height: 16.0),
+                HourlyCard(),
+              ],
+            ))
+          ],
+        ),
+      ),
     );
   }
 }
